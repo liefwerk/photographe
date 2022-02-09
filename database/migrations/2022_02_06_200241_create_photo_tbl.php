@@ -18,6 +18,7 @@ class CreatePhotoTbl extends Migration
             $table->string('title');
             $table->string('file_name');
             $table->string('path');
+            $table->string('path_150px');
             $table->timestamps();
         });
     }

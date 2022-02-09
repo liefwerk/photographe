@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Laravel 8 Uploading photo</title>
+@extends('layout')
 
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-</head>
-<body>
-
-<div class="container mt-5">
-
-  @if(session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-  @endif
+@section('content')
 
   <div class="card">
 
     <div class="card-header text-center font-weight-bold">
-      <h2>Laravel 8 Upload Photo Tutorial</h2>
+      <h1>Laravel 8 Upload Photo Tutorial</h1>
     </div>
     <div class="card-body">
         <form method="POST" enctype="multipart/form-data" id="upload-photo" action="{{ url('save') }}" >
@@ -32,7 +16,7 @@
                     <div class="form-group">
                         <input type="file" name="photo" placeholder="Choose photo" id="photo">
                         <label for="upload-photo" class="form-label">Title of the email
-                            <input type="text" name="title" class="form-control" id="upload-photo" placeholder="Blue elephant chased by a grey mice.">
+                            <input type="text" name="title" class="form-control" id="photo-title" placeholder="Blue elephant chased by a grey mice.">
                         </label>
                         @error('photo')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -49,6 +33,4 @@
     </div>
   </div>
 
-</div>
-</body>
-</html>
+@endsection
