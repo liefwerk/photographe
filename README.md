@@ -19,7 +19,7 @@ The application uses somes techniques to ease the computation process:
 
 ## TODO
 
-- [] Store the processing of the images in multiple functions 
-- [] Think of maximum height of an image 
-- [] Set up lazy loading for images 
-- [] Set up infinite scroll for images 
+- [ ] Store the processing of the images in multiple functions 
+- [ ] Think of maximum height of an image 
+- [ ] Set up lazy loading for images 
+- [ ] Set up infinite scroll for images 
